@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+        <h3>Luxury Sedan</h3>
+        <p>₹35,00,000</p>
+        <button onclick="buyCar('Luxury Sedan')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+        <h3>SUV</h3>
+        <p>₹25,00,000</p>
+        <button onclick="buyCar('SUV')">Buy Now</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 CarZone</p>
+</footer>
+
+<script>
+function buyCar(name){
+    alert("You selected " + name);
+}
+
+function goCars(){
+    document.getElementById("cars").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>

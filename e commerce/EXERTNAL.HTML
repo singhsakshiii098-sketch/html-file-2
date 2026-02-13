@@ -1,0 +1,204 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar - CSS Media Queries</title><style>
+
+{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f5f6fa;
+}
+
+
+. responsive navbar{
+  background:#ffffff;
+  box-shadow:0 2px 8px rgba (0,0,0,0.08);
+  position:sticky;
+  top:0;
+  width:100%;
+  z-index:1000;
+}
+
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+  height:65px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#2563eb;
+}
+
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
+}
+
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.icon{
+  font-size:20px;
+  cursor:pointer;
+}
+
+.login-btn{
+  background:#2563eb;
+  border:none;
+  color:white;
+  padding:8px 16px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.login-btn:hover{
+  background:#1e40af;
+}
+
+.menu-btn{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:white;
+  border-top:1px solid #eee;
+}
+
+.mobile-menu a{
+  padding:14px 20px;
+  text-decoration:none;
+  color:#333;
+  border-bottom:1px solid #eee;
+}
+
+.mobile-menu a:hover{
+  background:#f2f4f8;
+}
+
+.mobile-menu.show{
+  display:flex;
+}
+
+
+
+@media(max-width:900px){
+  .nav-links{
+    gap:18px;
+  }
+}
+
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-right{
+    display:none;
+  }
+
+  .menu - btn {
+    display :block;
+  }
+
+}
+
+
+@media(max-width:480px){
+
+  .logo{
+    font-size:20px;
+  }
+
+}
+
+
+.hero{
+  padding:60px 20px;
+  text -align :center;
+}
+
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#555;
+}
+
+</style></head>
+<body><!-- Navbar --><nav class="navbar">
+  <div class="nav-container"><div class="logo">ShopZone</div>
+
+<ul class="nav-links">
+  <li><a href ="#">Home</a></li>
+  <li><a href ="#">Shop</a></li>
+  <li><a href ="#">Categories</a></li>
+  <li><a href ="#">Deals</a></li>
+  <li><a href ="#">Contact</a></li>
+</ul>
+
+<div class="nav-right">
+  <span class="icon">🔍</span>
+  <span class="icon">🛒</span>
+  <button class="login-btn">Login</button>
+</div>
+
+<div class="menu-btn" id="menuBtn">☰</div>
+
+  </div>  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Categories</a>
+    <a href="#">Deals</a>
+    <a href="#">Contact</a>
+  </div></nav><!-- Demo Content --><section class="hero">
+  <h1>Navbar using CSS + Media Queries</h1>
+  <p>Resize screen to see responsive behaviour</p>
+</section><script>
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("show");
+});
+
+</script></body>
+</html>
+             
